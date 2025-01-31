@@ -21,6 +21,7 @@ NamesApiModel _$NamesApiModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$NamesApiModel {
   String get common => throw _privateConstructorUsedError;
+  String get official => throw _privateConstructorUsedError;
 
   /// Serializes this NamesApiModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -38,7 +39,7 @@ abstract class $NamesApiModelCopyWith<$Res> {
           NamesApiModel value, $Res Function(NamesApiModel) then) =
       _$NamesApiModelCopyWithImpl<$Res, NamesApiModel>;
   @useResult
-  $Res call({String common});
+  $Res call({String common, String official});
 }
 
 /// @nodoc
@@ -57,11 +58,16 @@ class _$NamesApiModelCopyWithImpl<$Res, $Val extends NamesApiModel>
   @override
   $Res call({
     Object? common = null,
+    Object? official = null,
   }) {
     return _then(_value.copyWith(
       common: null == common
           ? _value.common
           : common // ignore: cast_nullable_to_non_nullable
+              as String,
+      official: null == official
+          ? _value.official
+          : official // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -75,7 +81,7 @@ abstract class _$$NamesApiModelImplCopyWith<$Res>
       __$$NamesApiModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String common});
+  $Res call({String common, String official});
 }
 
 /// @nodoc
@@ -92,11 +98,16 @@ class __$$NamesApiModelImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? common = null,
+    Object? official = null,
   }) {
     return _then(_$NamesApiModelImpl(
       common: null == common
           ? _value.common
           : common // ignore: cast_nullable_to_non_nullable
+              as String,
+      official: null == official
+          ? _value.official
+          : official // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -107,17 +118,19 @@ class __$$NamesApiModelImplCopyWithImpl<$Res>
 class _$NamesApiModelImpl
     with DiagnosticableTreeMixin
     implements _NamesApiModel {
-  const _$NamesApiModelImpl({required this.common});
+  const _$NamesApiModelImpl({required this.common, required this.official});
 
   factory _$NamesApiModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$NamesApiModelImplFromJson(json);
 
   @override
   final String common;
+  @override
+  final String official;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'NamesApiModel(common: $common)';
+    return 'NamesApiModel(common: $common, official: $official)';
   }
 
   @override
@@ -125,7 +138,8 @@ class _$NamesApiModelImpl
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'NamesApiModel'))
-      ..add(DiagnosticsProperty('common', common));
+      ..add(DiagnosticsProperty('common', common))
+      ..add(DiagnosticsProperty('official', official));
   }
 
   @override
@@ -133,12 +147,14 @@ class _$NamesApiModelImpl
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$NamesApiModelImpl &&
-            (identical(other.common, common) || other.common == common));
+            (identical(other.common, common) || other.common == common) &&
+            (identical(other.official, official) ||
+                other.official == official));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, common);
+  int get hashCode => Object.hash(runtimeType, common, official);
 
   /// Create a copy of NamesApiModel
   /// with the given fields replaced by the non-null parameter values.
@@ -157,14 +173,17 @@ class _$NamesApiModelImpl
 }
 
 abstract class _NamesApiModel implements NamesApiModel {
-  const factory _NamesApiModel({required final String common}) =
-      _$NamesApiModelImpl;
+  const factory _NamesApiModel(
+      {required final String common,
+      required final String official}) = _$NamesApiModelImpl;
 
   factory _NamesApiModel.fromJson(Map<String, dynamic> json) =
       _$NamesApiModelImpl.fromJson;
 
   @override
   String get common;
+  @override
+  String get official;
 
   /// Create a copy of NamesApiModel
   /// with the given fields replaced by the non-null parameter values.

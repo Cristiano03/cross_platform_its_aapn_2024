@@ -9,9 +9,11 @@ part of 'names_model.dart';
 _$NamesApiModelImpl _$$NamesApiModelImplFromJson(Map<String, dynamic> json) =>
     _$NamesApiModelImpl(
       common: json['common'] as String,
+      official: json['official'] as String,
     );
 
 Map<String, dynamic> _$$NamesApiModelImplToJson(_$NamesApiModelImpl instance) =>
     <String, dynamic>{
       'common': instance.common,
+      'official': instance.official,
     };
