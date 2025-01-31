@@ -20,12 +20,12 @@ class HomePage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Paesi nel mondo'),
+        title: const Text('bandiere belle'),
         centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(
-          horizontal: 16.0, // Ridotto un po' il padding per un layout migliore
+          horizontal: 16.0,
           vertical: 16.0,
         ),
         child: Column(
